@@ -36,6 +36,7 @@ jobs:
 
         with:
           repository: xiyaozhuang/action-target
+          token: ${{ secrets.PUSH_TOKEN }}
 
       - name: Download artifact
         uses: actions/download-artifact@v4
