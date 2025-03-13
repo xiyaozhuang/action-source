@@ -1,5 +1,4 @@
 name: Deploy GitHub Pages
-run-name: ${{ github.ref_name }} is deploying GitHub Pages
 
 on:
   push:
