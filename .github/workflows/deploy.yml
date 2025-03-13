@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  Deploy-Github-Pages:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -24,7 +24,9 @@ jobs:
         run: |
           pwd
           ls
-          ls ${{ github.workspace }}
+          cd ..
+          pwd
+          ls
 
       - name: Check out target repository
         uses: actions/checkout@v4
@@ -35,6 +37,5 @@ jobs:
         run: |
           pwd
           ls
-          ls ${{ github.workspace }}
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
