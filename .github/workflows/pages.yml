@@ -1,5 +1,4 @@
 name: Deploy GitHub Pages
-run-name: ${{ github.run_id }} is deploying pages
 
 on:
   push:
@@ -48,5 +47,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -am "Deployed pages"
+          git add .
+          git commit -m "Deployed pages"
           git push
